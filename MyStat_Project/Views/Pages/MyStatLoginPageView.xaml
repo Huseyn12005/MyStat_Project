@@ -6,9 +6,31 @@
       xmlns:local="clr-namespace:MyStat_Project.Views.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MyStatLoginPageView">
+      Title="MyStatLoginPageView" Background="#213347">
+
+
 
     <Grid>
-        <Image Stretch="UniformToFill" Source="C:\Users\Baku\source\repos\MyStat_Project\MyStat_Project\StaticFiles\ImageFiles\MyStatLoginBackground.jpg" OpacityMask="Black"/>
+
+
+        <Image x:Name="laptop" Stretch="UniformToFill" Source="C:\Users\Baku\source\repos\MyStat_Project\MyStat_Project\StaticFiles\ImageFiles\MyStatLoginBackground.jpg" OpacityMask="Black"/>
+        <Rectangle Fill="#213347" Opacity="0.5" />
+
+        <Border Background="#9DA5B0" Opacity="0.5" Height="35" Width="210" Margin="0 0 0 75" CornerRadius="20">
+            <TextBox Padding="10" Foreground="White" FontSize="15" Background="Transparent" Height="40" Width="200"  BorderThickness="0" />
+        </Border>
+
+        <Border Background="#9DA5B0" Opacity="0.5" Height="35" Width="210" Margin="0 0 0 -10" CornerRadius="20">
+            <TextBox Padding="10" FontSize="15" Foreground="White" Background="Transparent" Height="40" Width="200"  BorderThickness="0" VerticalAlignment="Center" />
+        </Border>
+
+        <Border Background="#1bd2c7"  Height="35" Width="210" Margin="0 0 0 -95" CornerRadius="20">
+            <Button Padding="10"  Content="Entrance" Foreground="White" Background="Transparent" Height="35" Width="200"  BorderThickness="0" VerticalAlignment="Center"/>
+        </Border>
+
+        <Border Height="50" Width="200" Margin="0 0 0 200">
+            <Image Source="C:\Users\Baku\source\repos\MyStat_Project\MyStat_Project\StaticFiles\ImageFiles\logo.png"/>
+        </Border>
+
     </Grid>
 </Page>

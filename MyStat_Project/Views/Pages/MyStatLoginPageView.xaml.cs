@@ -1,5 +1,6 @@
 ﻿using MyStat_Project.ViewModels.PageViewModels;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace MyStat_Project.Views.Pages
 {
@@ -12,6 +13,9 @@ namespace MyStat_Project.Views.Pages
         {
             InitializeComponent();
             DataContext = new MyStatLoginPageViewModel();
+
+            
         }
+
     }
 }
