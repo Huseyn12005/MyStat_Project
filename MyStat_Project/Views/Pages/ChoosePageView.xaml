@@ -1,0 +1,38 @@
+﻿<Page x:Class="MyStat_Project.Views.Pages.ChoosePageView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:MyStat_Project.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ChoosePageView">
+
+    <Grid>
+        <Button
+            Command="{Binding EnterMyStatCommand}"
+            Background="#1bd2c7"
+            Name="MyStat_Enter"
+            Margin="0 0 0 70"
+            Width="100"
+            materialDesign:ButtonAssist.CornerRadius="5"
+            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+            ToolTip="MaterialDesignRaisedLightButton with Round Corners">
+        <TextBlock
+            Text="MyStat" />
+        </Button>
+
+        <Button
+            Background="#1bd2c7"
+            Name="LogBook_Enter"
+            Margin="0 0 0 -20"
+            Width="100"
+            materialDesign:ButtonAssist.CornerRadius="5"
+            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+            ToolTip="MaterialDesignRaisedLightButton with Round Corners">
+            <TextBlock
+            Text="LogBook" />
+        </Button>
+    </Grid>
+</Page>

@@ -1,0 +1,13 @@
+﻿<NavigationWindow x:Class="MyStat_Project.Views.Windows.MyStatMainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyStat_Project.Views.Windows"
+        mc:Ignorable="d"
+        ShowsNavigationUI="False" 
+        Title="MyStat" Height="450" Width="800" MinHeight="450" MinWidth="800" Icon="C:\Users\Baku\source\repos\MyStat_Project\MyStat_Project\StaticFiles\ImageFiles\MyStat.png">
+    <NavigationWindow.Content>
+        <Frame Source="../Pages/MyStatLoginPageView.xaml" />
+    </NavigationWindow.Content>
+</NavigationWindow>
