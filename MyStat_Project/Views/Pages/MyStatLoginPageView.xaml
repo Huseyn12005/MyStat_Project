@@ -25,7 +25,7 @@
     <Grid>
 
 
-        <Image x:Name="laptop" Stretch="UniformToFill" Source="C:\Users\Baku\source\repos\MyStat_Project\MyStat_Project\StaticFiles\ImageFiles\MyStatLoginBackground.jpg" OpacityMask="Black"/>
+        <Image x:Name="laptop" Stretch="UniformToFill" Source="..\..\StaticFiles\ImageFiles\MyStatLoginBackground.jpg" OpacityMask="Black"/>
         <Rectangle Fill="#213347" Opacity="0.5" />
 
         <Border Background="#9DA5B0" Opacity="0.5" Height="35" Width="210" Margin="0 0 0 75" CornerRadius="20">
@@ -41,7 +41,7 @@
         </Border>
 
         <Border Height="50" Width="200" Margin="0 0 0 200">
-            <Image Source="C:\Users\Baku\source\repos\MyStat_Project\MyStat_Project\StaticFiles\ImageFiles\logo.png"/>
+            <Image Source="..\..\StaticFiles\ImageFiles\logo.png"/>
         </Border>
 
         <Button Height="40" Width="200" Margin="0 0 0 -170" Background="Transparent" BorderThickness="0" Content="Forget yout password?" Foreground="#9DA5B0"/>
