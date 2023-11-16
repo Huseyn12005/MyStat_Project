@@ -116,7 +116,7 @@ namespace MyStat_Project.Models
             }
         }
 
-        public Student(string name_, string surname_, string father_,string username_,ObservableCollection<int> marks_)
+        public Student(string name_, string surname_, string father_, string username_)
         {
             Id = Guid.NewGuid();
             Name = name_;
@@ -126,8 +126,8 @@ namespace MyStat_Project.Models
             Email = username_ + "gmail.com";
             Diamonds = 0;
             Coins = 0;
-            Marks = null;
-        }
+            Marks = new ObservableCollection<int>();
+        }        
 
         public Student()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyStat_Project.Models
 {
-    internal class HomeWork
+    public class HomeWork
     {
     }
 }

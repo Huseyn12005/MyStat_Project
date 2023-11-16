@@ -13,6 +13,17 @@ namespace MyStat_Project.Models
     {
         private Teacher Teacher_;
         private ObservableCollection<Student> Student_;
+        private ObservableCollection<HomeWork> Homeworks;
+
+        public ObservableCollection<HomeWork> homeworks
+        {
+            get => Homeworks;
+            set
+            {
+                Homeworks = value;
+                OnPropertyChanged();
+            }
+        }
         public Guid id { get; set; }
 
         public Teacher teacher 
@@ -38,6 +49,7 @@ namespace MyStat_Project.Models
             Teacher_ = teacher_;
             Student_ = student_;
             id = Guid.NewGuid();
+            Homeworks = new ObservableCollection<HomeWork>();
         }
 
         public Academy_group()

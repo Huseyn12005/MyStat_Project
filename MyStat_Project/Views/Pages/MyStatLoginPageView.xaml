@@ -8,7 +8,19 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MyStatLoginPageView" Background="#213347">
 
-
+    <Page.Resources>
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Height" Value="35" />
+            <Setter Property="Width" Value="200" />
+            
+        </Style>
+    </Page.Resources>
 
     <Grid>
 
@@ -25,12 +37,14 @@
         </Border>
 
         <Border Background="#1bd2c7"  Height="35" Width="210" Margin="0 0 0 -95" CornerRadius="20">
-            <Button Padding="10"  Content="Entrance" Foreground="White" Background="Transparent" Height="35" Width="200"  BorderThickness="0" VerticalAlignment="Center"/>
+            <Button  Style="{StaticResource CustomButtonStyle}"  Content="Entrance"/>
         </Border>
 
         <Border Height="50" Width="200" Margin="0 0 0 200">
             <Image Source="C:\Users\Baku\source\repos\MyStat_Project\MyStat_Project\StaticFiles\ImageFiles\logo.png"/>
         </Border>
+
+        <Button Height="40" Width="200" Margin="0 0 0 -170" Background="Transparent" BorderThickness="0" Content="Forget yout password?" Foreground="#9DA5B0"/>
 
     </Grid>
 </Page>
