@@ -1,0 +1,115 @@
+{
+  "groups": [
+    {
+      "name": "2E",
+      "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m3n",
+      "teacher": {
+        "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m4n",
+        "name": "Cavid",
+        "surname": "Atamoglanov",
+        "email": "catamoglanov@gmail.com",
+        "password": "teacher1password"
+      },
+      "students": [
+        {
+          "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m5n",
+          "name": "Huseyn",
+          "surname": "Orucov",
+          "father": "Fedai",
+          "username": "Oruco_ac26",
+          "email": "Oruco_ac26@gmail.com",
+          "password": "20050228",
+          "diamonds": 10,
+          "coins": 20,
+          "marks": [ 11, 12, 12 ]
+        },
+        {
+          "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m6n",
+          "name": "Ali",
+          "surname": "Memmedov",
+          "father": "Rovshan",
+          "username": "Ali_2005",
+          "email": "Ali_2005@gmail.com",
+          "password": "12341234",
+          "diamonds": 15,
+          "coins": 25,
+          "marks": [ 12, 12, 12 ]
+        }
+      ]
+    },
+    {
+      "name": "18",
+      "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m7n",
+      "teacher": {
+        "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m8n",
+        "name": "Teacher2",
+        "surname": "Surname2",
+        "email": "teacher2@gmail.com",
+        "password": "teacher2password"
+      },
+      "students": [
+        {
+          "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m9n",
+          "name": "Student3",
+          "surname": "Surname3",
+          "father": "Father3",
+          "username": "student3",
+          "email": "student3@gmail.com",
+          "password": "student3password",
+          "diamonds": 5,
+          "coins": 15,
+          "marks": [ 70, 75, 82 ]
+        },
+        {
+          "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m0n",
+          "name": "Student4",
+          "surname": "Surname4",
+          "father": "Father4",
+          "username": "student4",
+          "email": "student4@gmail.com",
+          "password": "student4password",
+          "diamonds": 20,
+          "coins": 30,
+          "marks": [ 88, 94, 91 ]
+        }
+      ]
+    },
+    {
+      "name": "Group3",
+      "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m1n",
+      "teacher": {
+        "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m2n",
+        "name": "Teacher3",
+        "surname": "Surname3",
+        "email": "teacher3@gmail.com",
+        "password": "teacher3password"
+      },
+      "students": [
+        {
+          "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m3n",
+          "name": "Student5",
+          "surname": "Surname5",
+          "father": "Father5",
+          "username": "student5",
+          "email": "student5@gmail.com",
+          "password": "student5password",
+          "diamonds": 8,
+          "coins": 18,
+          "marks": [ 85, 89, 93 ]
+        },
+        {
+          "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m4n",
+          "name": "Student6",
+          "surname": "Surname6",
+          "father": "Father6",
+          "username": "student6",
+          "email": "student6@gmail.com",
+          "password": "student6password",
+          "diamonds": 12,
+          "coins": 22,
+          "marks": [ 76, 80, 84 ]
+        }
+      ]
+    }
+  ]
+}

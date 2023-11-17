@@ -3,23 +3,22 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:MyStat_Project.Views.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MyStatLoginPageView" Background="#213347">
 
     <Page.Resources>
-        <Style x:Key="CustomButtonStyle" TargetType="Button">
-            <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="FontFamily" Value="Arial" />
-            <Setter Property="FontSize" Value="14" />
-            <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="Background" Value="Transparent" />
-            <Setter Property="Foreground" Value="White" />
-            <Setter Property="Height" Value="35" />
-            <Setter Property="Width" Value="200" />
-            
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
     </Page.Resources>
 
     <Grid>
@@ -29,22 +28,43 @@
         <Rectangle Fill="#213347" Opacity="0.5" />
 
         <Border Background="#9DA5B0" Opacity="0.5" Height="35" Width="210" Margin="0 0 0 75" CornerRadius="20">
-            <TextBox Padding="10" Foreground="White" FontSize="15" Background="Transparent" Height="40" Width="200"  BorderThickness="0" />
+            <TextBox Padding="10" Foreground="White" FontSize="15" Background="Transparent" Height="40" Width="200"  BorderThickness="0" 
+                                         Text="{Binding student_.username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         </Border>
 
         <Border Background="#9DA5B0" Opacity="0.5" Height="35" Width="210" Margin="0 0 0 -10" CornerRadius="20">
-            <TextBox Padding="10" FontSize="15" Foreground="White" Background="Transparent" Height="40" Width="200"  BorderThickness="0" VerticalAlignment="Center" />
-        </Border>
-
-        <Border Background="#1bd2c7"  Height="35" Width="210" Margin="0 0 0 -95" CornerRadius="20">
-            <Button  Style="{StaticResource CustomButtonStyle}"  Content="Entrance"/>
+            <TextBox Padding="10" FontSize="15" Foreground="White" Background="Transparent" Height="40" Width="200"  BorderThickness="0" VerticalAlignment="Center" 
+                     Text="{Binding student_.password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         </Border>
 
         <Border Height="50" Width="200" Margin="0 0 0 200">
             <Image Source="..\..\StaticFiles\ImageFiles\logo.png"/>
         </Border>
 
-        <Button Height="40" Width="200" Margin="0 0 0 -170" Background="Transparent" BorderThickness="0" Content="Forget yout password?" Foreground="#9DA5B0"/>
+        <Button
+             Style="{StaticResource MaterialDesignRaisedDarkButton}"
+             Margin="0 0 0 -95"
+             Width="210"
+             Height="35"
+            
+            Command="{Binding EnterMainMenuCommand}"
+            CommandParameter="{Binding RelativeSource={RelativeSource
+            FindAncestor, AncestorType={x:Type Page}}}"
+             Background="#1bd2c7"
+             BorderThickness="0"
+             materialDesign:ButtonAssist.CornerRadius="20">
+            <TextBlock Text="Entrance"/>
+        </Button>
 
+        <Button
+             Style="{StaticResource MaterialDesignRaisedDarkButton}"
+             Margin="0 0 0 -170"
+             Width="210"
+             Height="35"
+             Background="Transparent"
+             BorderThickness="0"
+             materialDesign:ButtonAssist.CornerRadius="20">
+            <TextBlock Text="Forget your password?" Foreground="#9DA5B0"/>
+        </Button>
     </Grid>
 </Page>

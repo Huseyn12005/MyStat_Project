@@ -8,5 +8,6 @@ namespace MyStat_Project.ViewModels.WindowViewModels
 {
     public class MyStatMainViewModel
     {
+
     }
 }

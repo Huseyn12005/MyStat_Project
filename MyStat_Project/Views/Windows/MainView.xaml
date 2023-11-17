@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MyStat_Project.Views.Windows"
         mc:Ignorable="d"
         ShowsNavigationUI="False" 
-        Title="MainView" Height="450" Width="800">
+        Title="MainView" Height="450" Width="800" Icon="..\..\StaticFiles\ImageFiles\MyStat.png">
     <NavigationWindow.Content>
         <Frame Source="../Pages/ChoosePageView.xaml" />
     </NavigationWindow.Content>

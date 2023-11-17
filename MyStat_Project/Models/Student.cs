@@ -127,8 +127,8 @@ namespace MyStat_Project.Models
             Diamonds = 0;
             Coins = 0;
             Marks = new ObservableCollection<int>();
-        }        
-
+        }
+        public override string ToString() => $"{name} {username} {father}";
         public Student()
         {
             

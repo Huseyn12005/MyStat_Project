@@ -12,15 +12,15 @@ namespace MyStat_Project.Models
     public class Academy_group : NotificationService
     {
         private Teacher Teacher_;
-        private ObservableCollection<Student> Student_;
-        private ObservableCollection<HomeWork> Homeworks;
+        private ObservableCollection<Student> Students;
+        private string Name;
 
-        public ObservableCollection<HomeWork> homeworks
+        public string name
         {
-            get => Homeworks;
+            get => Name;
             set
             {
-                Homeworks = value;
+                Name = value;
                 OnPropertyChanged();
             }
         }
@@ -35,21 +35,21 @@ namespace MyStat_Project.Models
             }
         }
 
-        public ObservableCollection<Student> student 
-        { get => Student_;
+        public ObservableCollection<Student> students 
+        { get => Students;
             set {
-                Student_ = value;
+                Students = value;
                 OnPropertyChanged();
 
             } 
         }
 
-        public Academy_group(Teacher teacher_,ObservableCollection<Student> student_)
+        public Academy_group(string name_, Teacher teacher_,ObservableCollection<Student> student_)
         {
+            Name=name_;
             Teacher_ = teacher_;
-            Student_ = student_;
+            Students = student_;
             id = Guid.NewGuid();
-            Homeworks = new ObservableCollection<HomeWork>();
         }
 
         public Academy_group()

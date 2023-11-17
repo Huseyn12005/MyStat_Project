@@ -10,7 +10,7 @@
       Title="ChoosePageView">
 
     <Page.Resources>
-        <!-- Merged Dictionaries -->
+
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
@@ -19,8 +19,6 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-
-        <!-- Other Page-specific resources go here -->
 
     </Page.Resources>
 

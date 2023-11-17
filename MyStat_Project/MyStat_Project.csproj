@@ -11,6 +11,7 @@
     <None Remove="StaticFiles\ImageFiles\logo.png" />
     <None Remove="StaticFiles\ImageFiles\MyStat.png" />
     <None Remove="StaticFiles\ImageFiles\MyStatLoginBackground.jpg" />
+    <None Remove="StaticFiles\ImageFiles\user.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,10 +24,9 @@
     <Content Include="StaticFiles\ImageFiles\MyStatLoginBackground.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="DataBase\" />
+    <Content Include="StaticFiles\ImageFiles\user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
