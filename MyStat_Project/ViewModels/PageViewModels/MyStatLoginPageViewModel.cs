@@ -21,16 +21,21 @@ namespace MyStat_Project.ViewModels.PageViewModels
 {
     public class MyStatLoginPageViewModel : NotificationService
     {
-        public ObservableCollection<Academy> academies { get; set; }
+        public Academy academies { get; set; }
+        private ObservableCollection<Academy_group> Groups;
+        public ObservableCollection<Academy_group> groups { get => Groups; set { Groups = value; OnPropertyChanged(); } }
         public ICommand? EnterMainMenuCommand { get; set; }
-        private Student? student1;
-        public Student? student_ { get => student1; set { student1 = value; OnPropertyChanged(); } }
+        private Student student1;
+        public Student student_ { get => student1; set { student1 = value; OnPropertyChanged(); } }
 
         public MyStatLoginPageViewModel()
         {
-            string filePath = "../../../DataBase/StepIt.json";
-            string jsonData = File.ReadAllText(filePath);
-            academies = JsonSerializer.Deserialize<ObservableCollection<Academy>>(jsonData);
+            student_ = new Student();
+            var folder = new DirectoryInfo("../../../DataBase");
+            var fullPath = Path.Combine(folder.FullName, "StepIt.json");
+            var jsonText = File.ReadAllText(fullPath);
+            academies = JsonSerializer.Deserialize<Academy>(jsonText);
+            groups = new ObservableCollection<Academy_group>(academies!.groups);
             EnterMainMenuCommand = new RelayCommand(Enter, CanEnter);
         }
 
@@ -41,47 +46,35 @@ namespace MyStat_Project.ViewModels.PageViewModels
             MainMenuView.DataContext = new MainMenuViewModel(academies);
 
             window.NavigationService.Navigate(MainMenuView);
-
-
+            student_ = new();
         }
         public bool CanEnter(object? parameter)
         {
 
             bool found = false;
 
-            for (int i = 0; i < academies.Count; i++)
+
+            for (int j = 0; j < academies.groups.Count; j++)
             {
-                Academy academy = academies[i];
+                Academy_group group = academies.groups[j];
 
-                for (int j = 0; j < academy.groups.Count; j++)
+                for (int k = 0; k < group.students.Count; k++)
                 {
-                    Academy_group group = academy.groups[j];
+                    Student student = group.students[k];
 
-                    for (int k = 0; k < group.students.Count; k++)
+                    if (student_.username == student.username && student_.password == student.password)
                     {
-                        Student student = group.students[k];
 
-                        if (student.username == student_!.username && student.password == student_.password)
-                        {
-
-                            found = true;
-                            break;
-                        }
-                    }
-
-                    if (found)
-                    {
+                        found = true;
                         break;
                     }
                 }
-
-                if (found)
-                {
-                    break;
-                }
             }
-            student_ = new();
+
             return found;
+
+
+
         }
     }
 }

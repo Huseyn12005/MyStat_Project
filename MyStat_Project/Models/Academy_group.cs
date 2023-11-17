@@ -24,7 +24,6 @@ namespace MyStat_Project.Models
                 OnPropertyChanged();
             }
         }
-        public Guid id { get; set; }
 
         public Teacher teacher 
         { get => Teacher_;
@@ -49,7 +48,6 @@ namespace MyStat_Project.Models
             Name=name_;
             Teacher_ = teacher_;
             Students = student_;
-            id = Guid.NewGuid();
         }
 
         public Academy_group()

@@ -29,12 +29,19 @@
 
         <Border Background="#9DA5B0" Opacity="0.5" Height="35" Width="210" Margin="0 0 0 75" CornerRadius="20">
             <TextBox Padding="10" Foreground="White" FontSize="15" Background="Transparent" Height="40" Width="200"  BorderThickness="0" 
-                                         Text="{Binding student_.username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                         Text="{Binding student_.username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="Login"/>
         </Border>
 
         <Border Background="#9DA5B0" Opacity="0.5" Height="35" Width="210" Margin="0 0 0 -10" CornerRadius="20">
-            <TextBox Padding="10" FontSize="15" Foreground="White" Background="Transparent" Height="40" Width="200"  BorderThickness="0" VerticalAlignment="Center" 
-                     Text="{Binding student_.password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <!--<PasswordBox Padding="10" FontSize="15" Foreground="White" Background="Transparent" Height="40" Width="200"  BorderThickness="0" VerticalAlignment="Center" 
+                   Password = "{Binding student_.password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"     materialDesign:HintAssist.Hint="Password"/>-->
+            <PasswordBox  Height="40" Width="200" Padding="10" Background="Transparent" BorderThickness="0" FontSize="15" Foreground="White"
+    materialDesign:HintAssist.HelperText="Bound to Password1"
+    materialDesign:HintAssist.Hint="Password"
+    materialDesign:PasswordBoxAssist.Password="{Binding student_.password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+    materialDesign:TextFieldAssist.HasClearButton="True"
+    IsEnabled="{Binding ElementName=RevealPasswordDefaultEnabled, Path=IsChecked}"
+    Style="{StaticResource MaterialDesignRevealPasswordBox}" />
         </Border>
 
         <Border Height="50" Width="200" Margin="0 0 0 200">

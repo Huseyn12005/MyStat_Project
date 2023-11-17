@@ -10,7 +10,6 @@ namespace MyStat_Project.Models
 {
     public class Student : NotificationService
     {
-        private Guid Id;
         private string? Name;
         private string? Surname;
         private string? Father;
@@ -33,7 +32,7 @@ namespace MyStat_Project.Models
   
         public ObservableCollection<int> marks
         {
-            get => Marks;
+            get => Marks!;
             set
             {
                 Marks = value;
@@ -78,15 +77,6 @@ namespace MyStat_Project.Models
             }
         }
 
-        public Guid id
-        {
-            get => Id;
-            set
-            {
-                Id = value;
-                OnPropertyChanged();
-            }
-        }
         public string name
         {
             get => Name!;
@@ -118,7 +108,7 @@ namespace MyStat_Project.Models
 
         public Student(string name_, string surname_, string father_, string username_)
         {
-            Id = Guid.NewGuid();
+
             Name = name_;
             Surname = surname_;
             Father = father_;
@@ -131,7 +121,14 @@ namespace MyStat_Project.Models
         public override string ToString() => $"{name} {username} {father}";
         public Student()
         {
-            
+            Name = null;
+            Surname = null;
+            Father = null;
+            Username = null;
+            Email = null;
+            Diamonds = 0;
+            Coins = 0;
+            Marks = new ObservableCollection<int>();
         }
     }
 }

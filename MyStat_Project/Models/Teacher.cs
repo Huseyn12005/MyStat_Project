@@ -9,7 +9,6 @@ namespace MyStat_Project.Models
 {
     public class Teacher : NotificationService
     {
-        private Guid Id;
         private string? Name;
         private string? Surname;
         private string? Email;
@@ -35,15 +34,6 @@ namespace MyStat_Project.Models
             }
         }
 
-        public Guid id
-        {
-            get => Id;
-            set
-            {
-                Id = value;
-                OnPropertyChanged();
-            }
-        }
         public string name
         {
             get => Name!;

@@ -10,7 +10,7 @@ namespace MyStat_Project.ViewModels.PageViewModels
 {
     class MainMenuViewModel
     {
-        public MainMenuViewModel(ObservableCollection<Academy>academy_)
+        public MainMenuViewModel(Academy academy_)
         {
             
         }

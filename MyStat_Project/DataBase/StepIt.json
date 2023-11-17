@@ -2,9 +2,7 @@
   "groups": [
     {
       "name": "2E",
-      "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m3n",
       "teacher": {
-        "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m4n",
         "name": "Cavid",
         "surname": "Atamoglanov",
         "email": "catamoglanov@gmail.com",
@@ -12,7 +10,6 @@
       },
       "students": [
         {
-          "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m5n",
           "name": "Huseyn",
           "surname": "Orucov",
           "father": "Fedai",
@@ -24,7 +21,6 @@
           "marks": [ 11, 12, 12 ]
         },
         {
-          "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m6n",
           "name": "Ali",
           "surname": "Memmedov",
           "father": "Rovshan",
@@ -39,9 +35,7 @@
     },
     {
       "name": "18",
-      "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m7n",
       "teacher": {
-        "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m8n",
         "name": "Teacher2",
         "surname": "Surname2",
         "email": "teacher2@gmail.com",
@@ -49,7 +43,6 @@
       },
       "students": [
         {
-          "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m9n",
           "name": "Student3",
           "surname": "Surname3",
           "father": "Father3",
@@ -61,7 +54,6 @@
           "marks": [ 70, 75, 82 ]
         },
         {
-          "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m0n",
           "name": "Student4",
           "surname": "Surname4",
           "father": "Father4",
@@ -76,9 +68,7 @@
     },
     {
       "name": "Group3",
-      "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m1n",
       "teacher": {
-        "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m2n",
         "name": "Teacher3",
         "surname": "Surname3",
         "email": "teacher3@gmail.com",
@@ -86,7 +76,6 @@
       },
       "students": [
         {
-          "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m3n",
           "name": "Student5",
           "surname": "Surname5",
           "father": "Father5",
@@ -98,7 +87,6 @@
           "marks": [ 85, 89, 93 ]
         },
         {
-          "id": "a1b2c3d4-e5f6-g7h8-i9j0k1l2m4n",
           "name": "Student6",
           "surname": "Surname6",
           "father": "Father6",
