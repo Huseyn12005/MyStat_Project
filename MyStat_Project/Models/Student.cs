@@ -118,7 +118,7 @@ namespace MyStat_Project.Models
             Coins = 0;
             Marks = new ObservableCollection<int>();
         }
-        public override string ToString() => $"{name} {username} {father}";
+        public override string ToString() => $"{name} {surname} {father}";
         public Student()
         {
             Name = null;

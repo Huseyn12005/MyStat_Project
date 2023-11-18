@@ -8,20 +8,44 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="StaticFiles\ImageFiles\christal.png" />
+    <None Remove="StaticFiles\ImageFiles\coin.png" />
+    <None Remove="StaticFiles\ImageFiles\hover-logout.png" />
     <None Remove="StaticFiles\ImageFiles\logo.png" />
+    <None Remove="StaticFiles\ImageFiles\logout.png" />
     <None Remove="StaticFiles\ImageFiles\MyStat.png" />
     <None Remove="StaticFiles\ImageFiles\MyStatLoginBackground.jpg" />
+    <None Remove="StaticFiles\ImageFiles\park.jpg" />
+    <None Remove="StaticFiles\ImageFiles\star.png" />
     <None Remove="StaticFiles\ImageFiles\user.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="StaticFiles\ImageFiles\christal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="StaticFiles\ImageFiles\coin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="StaticFiles\ImageFiles\hover-logout.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="StaticFiles\ImageFiles\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="StaticFiles\ImageFiles\logout.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="StaticFiles\ImageFiles\MyStat.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="StaticFiles\ImageFiles\MyStatLoginBackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="StaticFiles\ImageFiles\park.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="StaticFiles\ImageFiles\star.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="StaticFiles\ImageFiles\user.png">

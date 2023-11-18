@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MyStat_Project.Views.Pages
 {
@@ -23,6 +24,25 @@ namespace MyStat_Project.Views.Pages
         public MainMenuView()
         {
             InitializeComponent();
+        }
+
+        private void LogOut_Enter(object sender, MouseEventArgs e)
+        {
+            Uri uri = new Uri("../../StaticFiles/ImageFiles/hover-logout.png", UriKind.Relative);
+            BitmapImage bitmapImage = new BitmapImage(uri);
+            logout.Source = bitmapImage;
+        }
+
+        private void LogOut_Leave(object sender, MouseEventArgs e)
+        {
+            Uri uri = new Uri("../../StaticFiles/ImageFiles/logout.png", UriKind.Relative);
+            BitmapImage bitmapImage = new BitmapImage(uri);
+            logout.Source = bitmapImage;
+        }
+
+        private void LogOut_ButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new MyStatLoginPageView());
         }
     }
 }

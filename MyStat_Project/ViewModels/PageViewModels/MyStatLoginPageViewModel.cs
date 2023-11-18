@@ -21,11 +21,16 @@ namespace MyStat_Project.ViewModels.PageViewModels
 {
     public class MyStatLoginPageViewModel : NotificationService
     {
-        public Academy academies { get; set; }
+        public Academy academies { get => academies1; set { academies1 = value; OnPropertyChanged(); } }
         private ObservableCollection<Academy_group> Groups;
         public ObservableCollection<Academy_group> groups { get => Groups; set { Groups = value; OnPropertyChanged(); } }
         public ICommand? EnterMainMenuCommand { get; set; }
         private Student student1;
+        private Academy academies1;
+        private Academy_group group1;
+
+        public Academy_group group_ { get => group1; set { group1 = value; OnPropertyChanged(); } }
+
         public Student student_ { get => student1; set { student1 = value; OnPropertyChanged(); } }
 
         public MyStatLoginPageViewModel()
@@ -43,9 +48,10 @@ namespace MyStat_Project.ViewModels.PageViewModels
         {
             var window = parameter as Page;
             var MainMenuView = new MainMenuView();
-            MainMenuView.DataContext = new MainMenuViewModel(academies);
+            MainMenuView.DataContext = new MainMenuViewModel(academies,student_,group_);
 
             window.NavigationService.Navigate(MainMenuView);
+            group_ = new();
             student_ = new();
         }
         public bool CanEnter(object? parameter)
@@ -64,7 +70,8 @@ namespace MyStat_Project.ViewModels.PageViewModels
 
                     if (student_.username == student.username && student_.password == student.password)
                     {
-
+                        group_ = group;
+                        student_ = student;
                         found = true;
                         break;
                     }

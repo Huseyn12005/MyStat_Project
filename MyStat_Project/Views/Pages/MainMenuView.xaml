@@ -20,17 +20,21 @@
 
     </Page.Resources>
     <Grid>
+        <Image x:Name="laptop" Stretch="UniformToFill" Source="..\..\StaticFiles\ImageFiles\park.jpg" OpacityMask="#213347cc"/>
+        <Rectangle Fill="#213347cc" Opacity="0.5" />
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.2*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0">
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.2*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
+            
             <Grid Grid.Row="0">
                 <Image Margin="0 0 5 0" Source="..\..\StaticFiles\ImageFiles\logo.png"/>
             </Grid>
@@ -48,15 +52,72 @@
 
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="0.9*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                    <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="0.3*"/>
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="0">
 
-                    <Image Width="20" Margin="10 0 0 0" HorizontalAlignment="Left" Source="..\..\StaticFiles\ImageFiles\user.png"/>
-                    <Label Content="{Binding CurrentUser}" Background="Transparent" Height="20" Margin="35 0 0 0"/>
+                    <Image Width="20" Margin="10,10,0,10" HorizontalAlignment="Left" Source="..\..\StaticFiles\ImageFiles\user.png"/>
+                    <Label  VerticalAlignment="Center" Content="{Binding CurrentStudent}" Background="Transparent" Margin="35,0,0,0"/>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="1.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Label VerticalAlignment="Center" Content="    Group: " Background="Transparent"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Label  Content="{Binding CurrentGroup.name}" VerticalAlignment="Center" />
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Label VerticalAlignment="Center" Margin="5 0 0 0" HorizontalContentAlignment="Right" Content="{Binding total}"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Image Source="..\..\StaticFiles\ImageFiles\star.png" Width="10" Margin="0,0,10,0"/>
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <Border Height="30" Width="130" Background="#f8f4fc" CornerRadius="15">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1.7*"/>
+                                    <ColumnDefinition Width="1.3*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Label VerticalAlignment="Center" Margin="5 0 0 0" HorizontalContentAlignment="Right" Content="{Binding CurrentStudent.diamonds}"/>
+                                </Grid>
+                                <Grid Grid.Column="1">
+                                    <Image Source="..\..\StaticFiles\ImageFiles\christal.png" Width="10" Margin="0,0,10,0"/>
+                                </Grid>
+                                <Grid Grid.Column="2">
+                                    <Label VerticalAlignment="Center" Margin="5 0 0 0" HorizontalContentAlignment="Right" Content="{Binding CurrentStudent.coins}"/>
+                                </Grid>
+                                <Grid Grid.Column="3">
+                                    <Image Source="..\..\StaticFiles\ImageFiles\coin.png" Width="10" Margin="0,0,10,0"/>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <Image Name="logout" MouseLeftButtonUp="LogOut_ButtonDown" MouseEnter="LogOut_Enter" MouseLeave="LogOut_Leave" Source="..\..\StaticFiles\ImageFiles\logout.png" Width="20" Margin="0,0,10,0"/>
                 </Grid>
             </Grid>
         </Grid>

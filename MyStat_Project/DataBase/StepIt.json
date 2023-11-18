@@ -51,7 +51,7 @@
           "password": "student3password",
           "diamonds": 5,
           "coins": 15,
-          "marks": [ 70, 75, 82 ]
+          "marks": [ 11, 10, 12 ]
         },
         {
           "name": "Student4",
@@ -62,7 +62,7 @@
           "password": "student4password",
           "diamonds": 20,
           "coins": 30,
-          "marks": [ 88, 94, 91 ]
+          "marks": [ 9, 10, 11 ]
         }
       ]
     },
@@ -84,7 +84,7 @@
           "password": "student5password",
           "diamonds": 8,
           "coins": 18,
-          "marks": [ 85, 89, 93 ]
+          "marks": [ 12, 11, 1 ]
         },
         {
           "name": "Student6",
@@ -95,7 +95,7 @@
           "password": "student6password",
           "diamonds": 12,
           "coins": 22,
-          "marks": [ 76, 80, 84 ]
+          "marks": [ 5, 9, 11 ]
         }
       ]
     }
