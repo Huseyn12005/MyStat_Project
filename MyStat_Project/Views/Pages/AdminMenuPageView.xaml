@@ -3,12 +3,67 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:MyStat_Project.Views.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AdminMenuPageView">
 
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Page.Resources>
     <Grid>
-        
+        <Button
+            Command="{Binding AllStudentsCommand}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource
+            FindAncestor, AncestorType={x:Type Page}}}"
+            Background="#1bd2c7"
+
+            Margin="0 0 0 70"
+            Width="140"
+            materialDesign:ButtonAssist.CornerRadius="5"
+            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+            ToolTip="MaterialDesignRaisedLightButton with Round Corners">
+            <TextBlock
+            Text="All Students" />
+        </Button>
+
+        <Button
+            Command="{Binding EnterTeacherCommand}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource
+            FindAncestor, AncestorType={x:Type Page}}}"
+            Background="#1bd2c7"
+
+            Margin="0 0 0 -20"
+            Width="140"
+            materialDesign:ButtonAssist.CornerRadius="5"
+            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+            ToolTip="MaterialDesignRaisedLightButton with Round Corners">
+            <TextBlock
+            Text="Add Students" />
+        </Button>
+
+        <Button
+            Command="{Binding EnterTeacherCommand}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource
+            FindAncestor, AncestorType={x:Type Page}}}"
+            Background="#1bd2c7"
+
+            Margin="0 0 0 -110"
+            Width="140"
+            materialDesign:ButtonAssist.CornerRadius="5"
+            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+            ToolTip="MaterialDesignRaisedLightButton with Round Corners">
+            <TextBlock
+            Text="Create Group" />
+        </Button>
     </Grid>
 </Page>

@@ -16,14 +16,14 @@ namespace MyStat_Project.ViewModels.PageViewModels
         private Academy_group currentGroup;
         private int Total;
         private IOrderedEnumerable<Student> students;
-        public IOrderedEnumerable<Student> sortedStudentsAll { get => SortedStudentsAll; set => SortedStudentsAll = value; }
+        public IOrderedEnumerable<Student> sortedStudentsAll { get => SortedStudentsAll; set { SortedStudentsAll = value; OnPropertyChanged(); } }
 
         public Academy academy { get => academy1; set { academy1 = value; OnPropertyChanged(); } }
 
         public Student CurrentStudent { get => student1; set { student1 = value; OnPropertyChanged(); } }
         public Academy_group CurrentGroup { get => currentGroup; set { currentGroup = value; OnPropertyChanged(); } }
         public int total { get => Total; set { Total = value; OnPropertyChanged(); } }
-        public IOrderedEnumerable<Student> SortedStudents { get => students; set => students = value; }
+        public IOrderedEnumerable<Student> SortedStudents { get => students; set { students = value; OnPropertyChanged(); } }
         private ObservableCollection<Academy_group> Groups;
         private IOrderedEnumerable<Student> SortedStudentsAll;
 
