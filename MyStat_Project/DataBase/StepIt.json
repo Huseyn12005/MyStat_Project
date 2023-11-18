@@ -3,107 +3,155 @@
     {
       "name": "2E",
       "teacher": {
-        "name": "Cavid",
-        "surname": "Atamoglanov",
         "email": "catamoglanov@gmail.com",
-        "password": "teacher1password"
+        "password": "cavid123",
+        "name": "Cavid",
+        "surname": "Atamoglanov"
       },
       "students": [
         {
+          "total": 30,
+          "password": "20050228",
+          "marks": [
+            11,
+            12,
+            12
+          ],
+          "username": "Oruco_ac26",
+          "email": "Oruco_ac26@gmail.com",
+          "diamonds": 10,
+          "coins": 20,
           "name": "Huseyn",
           "surname": "Orucov",
           "father": "Fedai",
-          "username": "Oruco_ac26",
-          "email": "Oruco_ac26@gmail.com",
-          "password": "20050228",
-          "diamonds": 10,
-          "coins": 20,
-          "marks": [ 11, 12, 12 ],
-          "total": 30
+          "FullName": "Huseyn Orucov Fedai"
         },
         {
+          "total": 40,
+          "password": "12341234",
+          "marks": [
+            12,
+            12,
+            12
+          ],
+          "username": "Ali_2005",
+          "email": "Ali_2005@gmail.com",
+          "diamonds": 15,
+          "coins": 25,
           "name": "Ali",
           "surname": "Memmedov",
           "father": "Rovshan",
-          "username": "Ali_2005",
-          "email": "Ali_2005@gmail.com",
-          "password": "12341234",
-          "diamonds": 15,
-          "coins": 25,
-          "marks": [ 12, 12, 12 ],
-          "total": 40
+          "FullName": "Ali Memmedov Rovshan"
+        },
+        {
+          "total": 0,
+          "password": "elnur123",
+          "marks": [],
+          "username": "elnur",
+          "email": "elnur@gmail.com",
+          "diamonds": 0,
+          "coins": 0,
+          "name": "Elnur",
+          "surname": "Memmedov",
+          "father": "Rufet",
+          "FullName": "Elnur Memmedov Rufet"
         }
       ]
     },
     {
       "name": "18",
       "teacher": {
-        "name": "Teacher2",
-        "surname": "Surname2",
         "email": "teacher2@gmail.com",
-        "password": "teacher2password"
+        "password": "teacher2password",
+        "name": "Teacher2",
+        "surname": "Surname2"
       },
       "students": [
         {
+          "total": 20,
+          "password": "student3password",
+          "marks": [
+            11,
+            10,
+            12
+          ],
+          "username": "student3",
+          "email": "student3@gmail.com",
+          "diamonds": 5,
+          "coins": 15,
           "name": "Student3",
           "surname": "Surname3",
           "father": "Father3",
-          "username": "student3",
-          "email": "student3@gmail.com",
-          "password": "student3password",
-          "diamonds": 5,
-          "coins": 15,
-          "marks": [ 11, 10, 12 ],
-          "total": 20
+          "FullName": "Student3 Surname3 Father3"
         },
         {
+          "total": 50,
+          "password": "student4password",
+          "marks": [
+            9,
+            10,
+            11
+          ],
+          "username": "student4",
+          "email": "student4@gmail.com",
+          "diamonds": 20,
+          "coins": 30,
           "name": "Student4",
           "surname": "Surname4",
           "father": "Father4",
-          "username": "student4",
-          "email": "student4@gmail.com",
-          "password": "student4password",
-          "diamonds": 20,
-          "coins": 30,
-          "marks": [ 9, 10, 11 ],
-          "total": 50
+          "FullName": "Student4 Surname4 Father4"
         }
       ]
     },
     {
       "name": "Group3",
       "teacher": {
-        "name": "Teacher3",
-        "surname": "Surname3",
         "email": "teacher3@gmail.com",
-        "password": "teacher3password"
+        "password": "teacher3password",
+        "name": "Teacher3",
+        "surname": "Surname3"
       },
       "students": [
         {
+          "total": 26,
+          "password": "student5password",
+          "marks": [
+            12,
+            11,
+            1
+          ],
+          "username": "student5",
+          "email": "student5@gmail.com",
+          "diamonds": 8,
+          "coins": 18,
           "name": "Student5",
           "surname": "Surname5",
           "father": "Father5",
-          "username": "student5",
-          "email": "student5@gmail.com",
-          "password": "student5password",
-          "diamonds": 8,
-          "coins": 18,
-          "marks": [ 12, 11, 1 ],
-          "total": 26
+          "FullName": "Student5 Surname5 Father5"
         },
         {
+          "total": 34,
+          "password": "student6password",
+          "marks": [
+            5,
+            9,
+            11
+          ],
+          "username": "student6",
+          "email": "student6@gmail.com",
+          "diamonds": 12,
+          "coins": 22,
           "name": "Student6",
           "surname": "Surname6",
           "father": "Father6",
-          "username": "student6",
-          "email": "student6@gmail.com",
-          "password": "student6password",
-          "diamonds": 12,
-          "coins": 22,
-          "marks": [ 5, 9, 11 ],
-          "total": 34
+          "FullName": "Student6 Surname6 Father6"
         }
       ]
+    },
+    {
+      "name": "23",
+      "teacher": null,
+      "students": []
     }
   ]
 }

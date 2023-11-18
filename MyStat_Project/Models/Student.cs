@@ -26,7 +26,7 @@ namespace MyStat_Project.Models
             get => Total;
             set
             {
-                Total = diamonds + coins;
+                Total =value;
                 OnPropertyChanged();
             }
         }
@@ -127,6 +127,7 @@ namespace MyStat_Project.Models
             Email = username_ + "@gmail.com";
             Diamonds = 0;
             Coins = 0;
+            total = diamonds + coins;
             Marks = new ObservableCollection<int>();
         }
         public override string ToString() => $"{name} {surname} {father}";
@@ -137,7 +138,6 @@ namespace MyStat_Project.Models
             Surname = null;
             Father = null;
             Username = null;
-            Email = username+"@gmail.com";
             Diamonds = 0;
             Coins = 0;
             Marks = new ObservableCollection<int>();

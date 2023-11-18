@@ -14,7 +14,6 @@ namespace MyStat_Project.ViewModels.PageViewModels
         private Academy academy1;
         private Student student1;
         private Academy_group currentGroup;
-        private int Total;
         private IOrderedEnumerable<Student> students;
         public IOrderedEnumerable<Student> sortedStudentsAll { get => SortedStudentsAll; set { SortedStudentsAll = value; OnPropertyChanged(); } }
 
@@ -22,7 +21,6 @@ namespace MyStat_Project.ViewModels.PageViewModels
 
         public Student CurrentStudent { get => student1; set { student1 = value; OnPropertyChanged(); } }
         public Academy_group CurrentGroup { get => currentGroup; set { currentGroup = value; OnPropertyChanged(); } }
-        public int total { get => Total; set { Total = value; OnPropertyChanged(); } }
         public IOrderedEnumerable<Student> SortedStudents { get => students; set { students = value; OnPropertyChanged(); } }
         private ObservableCollection<Academy_group> Groups;
         private IOrderedEnumerable<Student> SortedStudentsAll;
@@ -33,7 +31,6 @@ namespace MyStat_Project.ViewModels.PageViewModels
             academy = academy_;
             CurrentStudent = student_;
             CurrentGroup = group_;
-            total = CurrentStudent.diamonds + CurrentStudent.coins;
             SortedStudents = CurrentGroup.students.OrderByDescending(student => student.diamonds + student.coins);
             groups = groups_;
             SortedStudentsAll = groups.SelectMany(group => group.students).OrderByDescending(student => student.diamonds + student.coins);

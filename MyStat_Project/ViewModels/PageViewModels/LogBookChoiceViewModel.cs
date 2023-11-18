@@ -37,7 +37,7 @@ namespace MyStat_Project.ViewModels.PageViewModels
 
             var window = parameter as Page;
             var TeacherEnterView = new TeacherLoginPageVIew();
-            TeacherEnterView.DataContext = new AdminLoginPageViewModel();
+            TeacherEnterView.DataContext = new TeacherLoginPageViewModel();
             window.NavigationService.Navigate(TeacherEnterView);
         }
     }

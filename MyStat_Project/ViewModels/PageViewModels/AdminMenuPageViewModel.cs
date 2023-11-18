@@ -39,6 +39,7 @@ namespace MyStat_Project.ViewModels.PageViewModels
 
         public ICommand? AllStudentsCommand { get; set; }
         public ICommand? AddStudentsCommand { get; set; }
+        public ICommand? CreatGroupCommand { get; set; }
         public Admin admin { get => Admin; set => Admin = value; }
 
         public AdminMenuPageViewModel(Academy academy_, Student student_, Academy_group group_, ObservableCollection<Academy_group> groups_)
@@ -51,13 +52,14 @@ namespace MyStat_Project.ViewModels.PageViewModels
             SortedStudentsAll = groups.SelectMany(group => group.students).OrderByDescending(student => student.diamonds + student.coins);
             AllStudentsCommand = new RelayCommand(EnterAllStudents);
             AddStudentsCommand = new RelayCommand(EnterAddStudents);
+            CreatGroupCommand = new RelayCommand(EnterCreatGroup);
         }
 
         public void EnterAllStudents(object? parameter)
         {
             var window = parameter as Page;
             var MainMenuView = new AllStudentsPageView();
-            MainMenuView.DataContext = new AllStudentsPageViewModel(groups, SortedStudentsAll);
+            MainMenuView.DataContext = new AllStudentsPageViewModel( groups, SortedStudentsAll);
 
             window.NavigationService.Navigate(MainMenuView);
 
@@ -67,7 +69,17 @@ namespace MyStat_Project.ViewModels.PageViewModels
         {
             var window = parameter as Page;
             var MainMenuView = new AddStudentsPageView();
-            MainMenuView.DataContext = new AddStudentsPageViewModel(groups);
+            MainMenuView.DataContext = new AddStudentsPageViewModel( academy,groups);
+
+            window.NavigationService.Navigate(MainMenuView);
+
+        }
+
+        public void EnterCreatGroup(object? parameter)
+        {
+            var window = parameter as Page;
+            var MainMenuView = new CreatGroupPageView();
+            MainMenuView.DataContext = new CreateGroupPageViewModel(academy, groups);
 
             window.NavigationService.Navigate(MainMenuView);
 

@@ -16,15 +16,13 @@ using System.Windows.Shapes;
 namespace MyStat_Project.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for AddStudentsPageView.xaml
+    /// Interaction logic for TeacherMenuPageView.xaml
     /// </summary>
-    public partial class AddStudentsPageView : Page
+    public partial class TeacherMenuPageView : Page
     {
-        public AddStudentsPageView()
+        public TeacherMenuPageView()
         {
             InitializeComponent();
         }
-
-
     }
 }

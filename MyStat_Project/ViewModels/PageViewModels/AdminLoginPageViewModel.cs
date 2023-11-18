@@ -50,6 +50,16 @@ namespace MyStat_Project.ViewModels.PageViewModels
             groups = new ObservableCollection<Academy_group>(academies!.groups);
             EnterMainMenuCommand = new RelayCommand(Enter, CanEnter);
             EnterAdminMenuCommand = new RelayCommand(Enter, CanEnter);
+
+            var folder_ = new DirectoryInfo("../../../DataBase");
+            var fullPath_ = Path.Combine(folder_.FullName, "admin.json");
+
+            JsonSerializerOptions options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+            var jsonText_ = JsonSerializer.Serialize(admin, options);
+            File.WriteAllText(fullPath_, jsonText_);
         }
         public void Enter(object? parameter)
         {

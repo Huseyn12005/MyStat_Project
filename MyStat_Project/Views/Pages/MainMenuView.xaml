@@ -85,7 +85,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <Label VerticalAlignment="Center" Margin="5 0 0 0" HorizontalContentAlignment="Right" Content="{Binding total}"/>
+                        <Label VerticalAlignment="Center" Margin="5 0 0 0" HorizontalContentAlignment="Right" Content="{Binding CurrentStudent.total}"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Image Source="..\..\StaticFiles\ImageFiles\star.png" Width="10" Margin="0,0,10,0"/>

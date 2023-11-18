@@ -52,7 +52,7 @@
         </Button>
 
         <Button
-            Command="{Binding EnterTeacherCommand}"
+            Command="{Binding CreatGroupCommand}"
                         CommandParameter="{Binding RelativeSource={RelativeSource
             FindAncestor, AncestorType={x:Type Page}}}"
             Background="#1bd2c7"

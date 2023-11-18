@@ -16,7 +16,7 @@ using System.Windows.Input;
 
 namespace MyStat_Project.ViewModels.PageViewModels
 {
-    class AddStudentsPageViewModel:NotificationService
+    class CreateGroupPageViewModel:NotificationService
     {
         private Academy academies1;
         public Academy academies { get => academies1; set { academies1 = value; OnPropertyChanged(); } }
@@ -31,10 +31,12 @@ namespace MyStat_Project.ViewModels.PageViewModels
         public Student student_ { get => student1; set { student1 = value; OnPropertyChanged(); } }
         public string groupName { get => groupName1; set { groupName1 = value; OnPropertyChanged(); } }
         public ICommand? SaveCommand { get; set; }
-        public AddStudentsPageViewModel(Academy academy_, ObservableCollection<Academy_group> groups_)
+
+        public CreateGroupPageViewModel(Academy academy_, ObservableCollection<Academy_group> groups_)
         {
             academies = academy_;
-            student_ = new Student();
+            group_ = new();
+ 
             groups = groups_;
             SaveCommand = new RelayCommand(Save, CanSave);
             BackCommand = new RelayCommand(BackPage);
@@ -50,18 +52,9 @@ namespace MyStat_Project.ViewModels.PageViewModels
         }
         public void Save(object? parameter)
         {
-            for (var i = 0; i < groups.Count; i++)
-            {
-                Academy_group group = groups[i];
-                if(groupName == group.name)
-                {
-                    student_.email = student_.username + "@gmail.com";
-                    group.students.Add(student_);
-                    break;
-                }
-            }
-
-            student_ = new();
+            group_.students = new ObservableCollection<Student>();
+            academies.groups.Add(group_);
+            group_ = new();
 
             var folder = new DirectoryInfo("../../../DataBase");
             var fullPath = Path.Combine(folder.FullName, "StepIt.json");
@@ -70,17 +63,17 @@ namespace MyStat_Project.ViewModels.PageViewModels
             {
                 WriteIndented = true
             };
+
+            // Assuming 'academy' is the instance of the Academy class you want to serialize
             var jsonText = JsonSerializer.Serialize(academies, options);
+
+            // Write the serialized JSON to the file
             File.WriteAllText(fullPath, jsonText);
 
         }
         public bool CanSave(object? parameter)
         {
-            return !string.IsNullOrEmpty(student_!.name) &&
-                   !string.IsNullOrEmpty(student_!.username) &&
-                   !string.IsNullOrEmpty(student_!.surname) &&
-                   !string.IsNullOrEmpty(student_!.father) &&
-                   !string.IsNullOrEmpty(student_!.password);
+            return !string.IsNullOrEmpty(group_!.name);
         }
     }
 }

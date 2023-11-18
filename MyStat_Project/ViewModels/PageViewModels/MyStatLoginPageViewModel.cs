@@ -64,18 +64,22 @@ namespace MyStat_Project.ViewModels.PageViewModels
             {
                 Academy_group group = academies.groups[j];
 
-                for (int k = 0; k < group.students.Count; k++)
+                if(group.students != null)
                 {
-                    Student student = group.students[k];
-
-                    if (student_.username == student.username && student_.password == student.password)
+                    for (int k = 0; k < group.students.Count; k++)
                     {
-                        group_ = group;
-                        student_ = student;
-                        found = true;
-                        break;
+                        Student student = group.students[k];
+
+                        if (student_.username == student.username && student_.password == student.password)
+                        {
+                            group_ = group;
+                            student_ = student;
+                            found = true;
+                            break;
+                        }
                     }
                 }
+
             }
 
             return found;
