@@ -1,4 +1,5 @@
-﻿using MyStat_Project.ViewModels.WindowViewModels;
+﻿using MyStat_Project.Models;
+using MyStat_Project.ViewModels.WindowViewModels;
 using MyStat_Project.Views.Windows;
 using System;
 using System.Collections.Generic;

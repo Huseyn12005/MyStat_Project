@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:MyStat_Project.Views.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -20,15 +21,14 @@
 
     </Page.Resources>
     <Grid>
-        <Image x:Name="laptop" Stretch="UniformToFill" Source="..\..\StaticFiles\ImageFiles\park.jpg" OpacityMask="#213347cc"/>
-        <Rectangle Fill="#213347cc" Opacity="0.5" />
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.2*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <Image x:Name="laptop" Stretch="UniformToFill" Source="..\..\StaticFiles\ImageFiles\park.jpg" OpacityMask="Black"/>
+        <Rectangle Fill="#213347" Opacity="0.5" />
 
         <Grid Grid.Column="0">
-            
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.2*"/>
                 <RowDefinition/>
@@ -40,7 +40,7 @@
             </Grid>
 
             <Grid Grid.Row="1">
-                <Button Content="Main" Foreground="White" Background="Transparent"/>
+                <Button Content="Main" Foreground="White" Background="Transparent" VerticalAlignment="Top"/>
             </Grid>
         </Grid>
 
@@ -119,6 +119,47 @@
                 <Grid Grid.Column="3">
                     <Image Name="logout" MouseLeftButtonUp="LogOut_ButtonDown" MouseEnter="LogOut_Enter" MouseLeave="LogOut_Leave" Source="..\..\StaticFiles\ImageFiles\logout.png" Width="20" Margin="0,0,10,0"/>
                 </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1" Background="#f8f4fc">
+                <Border Background="White" Height="40" Width="250" Margin="-350 10 0 0" VerticalAlignment="Top">
+                    <Label Content="Board of the Group Leaders" FontSize="18"/>
+                </Border>
+
+                <Border Background="White" VerticalAlignment="Top" CornerRadius="5" Margin="-350 50 0 0" Height="250" Width="250">
+                    <ListView ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ItemsSource="{Binding SortedStudents}" materialDesign:ListBoxItemAssist.ShowSelection="False">
+                        <ListView.View>
+                            <GridView>
+                                <GridView.Columns>
+                                    <GridViewColumn Header="Student" DisplayMemberBinding="{Binding FullName}"/>
+                                    <GridViewColumn Header="Total" DisplayMemberBinding="{Binding total}"/>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+
+
+                    </ListView>
+
+                </Border>
+
+                <Border Background="White" Height="40" Width="250" Margin="350 10 0 0" VerticalAlignment="Top">
+                    <Label Content="Board of the Academy Leaders" FontSize="18"/>
+                </Border>
+                <Border Background="White" VerticalAlignment="Top" CornerRadius="5" Margin="350 50 0 0" Height="250" Width="250">
+                    <ListView ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ItemsSource="{Binding sortedStudentsAll}" materialDesign:ListBoxItemAssist.ShowSelection="False">
+                        <ListView.View>
+                            <GridView>
+                                <GridView.Columns>
+                                    <GridViewColumn Header="Student" DisplayMemberBinding="{Binding FullName}"/>
+                                    <GridViewColumn Header="Total" DisplayMemberBinding="{Binding total}"/>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+
+
+                    </ListView>
+
+                </Border>
             </Grid>
         </Grid>
 

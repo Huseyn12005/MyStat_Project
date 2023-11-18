@@ -18,7 +18,8 @@
           "password": "20050228",
           "diamonds": 10,
           "coins": 20,
-          "marks": [ 11, 12, 12 ]
+          "marks": [ 11, 12, 12 ],
+          "total": 30
         },
         {
           "name": "Ali",
@@ -29,7 +30,8 @@
           "password": "12341234",
           "diamonds": 15,
           "coins": 25,
-          "marks": [ 12, 12, 12 ]
+          "marks": [ 12, 12, 12 ],
+          "total": 40
         }
       ]
     },
@@ -51,7 +53,8 @@
           "password": "student3password",
           "diamonds": 5,
           "coins": 15,
-          "marks": [ 11, 10, 12 ]
+          "marks": [ 11, 10, 12 ],
+          "total": 20
         },
         {
           "name": "Student4",
@@ -62,7 +65,8 @@
           "password": "student4password",
           "diamonds": 20,
           "coins": 30,
-          "marks": [ 9, 10, 11 ]
+          "marks": [ 9, 10, 11 ],
+          "total": 50
         }
       ]
     },
@@ -84,7 +88,8 @@
           "password": "student5password",
           "diamonds": 8,
           "coins": 18,
-          "marks": [ 12, 11, 1 ]
+          "marks": [ 12, 11, 1 ],
+          "total": 26
         },
         {
           "name": "Student6",
@@ -95,7 +100,8 @@
           "password": "student6password",
           "diamonds": 12,
           "coins": 22,
-          "marks": [ 5, 9, 11 ]
+          "marks": [ 5, 9, 11 ],
+          "total": 34
         }
       ]
     }

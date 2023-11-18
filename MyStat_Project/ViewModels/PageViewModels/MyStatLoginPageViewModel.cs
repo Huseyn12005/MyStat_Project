@@ -48,7 +48,7 @@ namespace MyStat_Project.ViewModels.PageViewModels
         {
             var window = parameter as Page;
             var MainMenuView = new MainMenuView();
-            MainMenuView.DataContext = new MainMenuViewModel(academies,student_,group_);
+            MainMenuView.DataContext = new MainMenuViewModel(academies,student_,group_,groups);
 
             window.NavigationService.Navigate(MainMenuView);
             group_ = new();

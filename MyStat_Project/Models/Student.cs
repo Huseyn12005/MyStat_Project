@@ -19,7 +19,17 @@ namespace MyStat_Project.Models
         private int Coins;
         private ObservableCollection<int>? Marks;
         private string? Password;
+        private int Total;
 
+        public int total
+        {
+            get => Total;
+            set
+            {
+                Total = diamonds + coins;
+                OnPropertyChanged();
+            }
+        }
         public string password
         {
             get => Password;
@@ -119,6 +129,7 @@ namespace MyStat_Project.Models
             Marks = new ObservableCollection<int>();
         }
         public override string ToString() => $"{name} {surname} {father}";
+        public string FullName => $"{name} {surname} {father}";
         public Student()
         {
             Name = null;
@@ -129,6 +140,7 @@ namespace MyStat_Project.Models
             Diamonds = 0;
             Coins = 0;
             Marks = new ObservableCollection<int>();
+            total = diamonds + coins;
         }
     }
 }

@@ -17,10 +17,12 @@ namespace MyStat_Project.ViewModels.PageViewModels
     public class ChoosePageViewModel : NotificationService
     {
         public ICommand? EnterMyStatCommand { get; set; }
+        public ICommand? EnterLogBookCommand { get; set; }
 
         public ChoosePageViewModel()
         {
             EnterMyStatCommand = new RelayCommand(EnterMyStat);
+            EnterLogBookCommand = new RelayCommand(EnterLogBook);
         }
 
         public void EnterMyStat(object? parameter)
@@ -28,6 +30,14 @@ namespace MyStat_Project.ViewModels.PageViewModels
 
             var addView = new MyStatMainView();
             addView.DataContext = new MyStatMainViewModel();
+            addView.ShowDialog();
+        }
+
+        public void EnterLogBook(object? parameter)
+        {
+
+            var addView = new LogBookMainView();
+            addView.DataContext = new LogBookMainViewModel();
             addView.ShowDialog();
         }
     }
