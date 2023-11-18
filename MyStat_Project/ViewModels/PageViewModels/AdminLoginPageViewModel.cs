@@ -54,7 +54,7 @@ namespace MyStat_Project.ViewModels.PageViewModels
         public void Enter(object? parameter)
         {
             var window = parameter as Page;
-            var MainMenuView = new AdminLoginPageView();
+            var MainMenuView = new AdminMenuPageView();
             MainMenuView.DataContext = new AdminMenuPageViewModel(academies, student_, group_, groups);
 
             window.NavigationService.Navigate(MainMenuView);

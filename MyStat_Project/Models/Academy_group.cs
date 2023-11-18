@@ -54,5 +54,6 @@ namespace MyStat_Project.Models
         {
             
         }
+        public override string ToString() => $"{name}";
     }
 }

@@ -30,7 +30,6 @@ namespace MyStat_Project.ViewModels.PageViewModels
 
         public Student CurrentStudent { get => student1; set { student1 = value; OnPropertyChanged(); } }
         public Academy_group CurrentGroup { get => currentGroup; set { currentGroup = value; OnPropertyChanged(); } }
-        public int total { get => Total; set { Total = value; OnPropertyChanged(); } }
         public IOrderedEnumerable<Student> SortedStudents { get => students; set { students = value; OnPropertyChanged(); } }
         private ObservableCollection<Academy_group> Groups;
         private IOrderedEnumerable<Student> SortedStudentsAll;
@@ -39,6 +38,7 @@ namespace MyStat_Project.ViewModels.PageViewModels
         private Admin Admin;
 
         public ICommand? AllStudentsCommand { get; set; }
+        public ICommand? AddStudentsCommand { get; set; }
         public Admin admin { get => Admin; set => Admin = value; }
 
         public AdminMenuPageViewModel(Academy academy_, Student student_, Academy_group group_, ObservableCollection<Academy_group> groups_)
@@ -46,18 +46,28 @@ namespace MyStat_Project.ViewModels.PageViewModels
             academy = academy_;
             CurrentStudent = student_;
             CurrentGroup = group_;
-            total = CurrentStudent.diamonds + CurrentStudent.coins;
-            SortedStudents = CurrentGroup.students.OrderByDescending(student => student.diamonds + student.coins);
+
             groups = groups_;
             SortedStudentsAll = groups.SelectMany(group => group.students).OrderByDescending(student => student.diamonds + student.coins);
             AllStudentsCommand = new RelayCommand(EnterAllStudents);
+            AddStudentsCommand = new RelayCommand(EnterAddStudents);
         }
 
         public void EnterAllStudents(object? parameter)
         {
             var window = parameter as Page;
             var MainMenuView = new AllStudentsPageView();
-            MainMenuView.DataContext = new AllStudentsPageViewModel(groups);
+            MainMenuView.DataContext = new AllStudentsPageViewModel(groups, SortedStudentsAll);
+
+            window.NavigationService.Navigate(MainMenuView);
+
+        }
+
+        public void EnterAddStudents(object? parameter)
+        {
+            var window = parameter as Page;
+            var MainMenuView = new AddStudentsPageView();
+            MainMenuView.DataContext = new AddStudentsPageViewModel(groups);
 
             window.NavigationService.Navigate(MainMenuView);
 

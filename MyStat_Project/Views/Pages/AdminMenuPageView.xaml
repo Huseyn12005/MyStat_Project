@@ -37,7 +37,7 @@
         </Button>
 
         <Button
-            Command="{Binding EnterTeacherCommand}"
+            Command="{Binding AddStudentsCommand}"
                         CommandParameter="{Binding RelativeSource={RelativeSource
             FindAncestor, AncestorType={x:Type Page}}}"
             Background="#1bd2c7"

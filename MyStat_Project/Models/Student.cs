@@ -116,14 +116,15 @@ namespace MyStat_Project.Models
             }
         }
 
-        public Student(string name_, string surname_, string father_, string username_)
+        public Student(string name_, string surname_, string father_, string username_,string password_)
         {
 
             Name = name_;
             Surname = surname_;
             Father = father_;
             Username = username_;
-            Email = username_ + "gmail.com";
+            Password = password_;
+            Email = username_ + "@gmail.com";
             Diamonds = 0;
             Coins = 0;
             Marks = new ObservableCollection<int>();
@@ -136,7 +137,7 @@ namespace MyStat_Project.Models
             Surname = null;
             Father = null;
             Username = null;
-            Email = null;
+            Email = username+"@gmail.com";
             Diamonds = 0;
             Coins = 0;
             Marks = new ObservableCollection<int>();
