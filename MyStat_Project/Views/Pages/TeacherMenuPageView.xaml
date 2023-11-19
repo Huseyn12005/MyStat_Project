@@ -26,38 +26,18 @@
         <Border Background="White" VerticalAlignment="Top" CornerRadius="5" Margin="0 60 0 0" Height="390" Width="800">
             <Grid>
 
-                <TextBox 
-                    Text="{Binding group_.name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                    materialDesign:HintAssist.Hint="Enter GroupName"
-                    HorizontalContentAlignment="Right"
-                    FontSize="18" 
-                    Margin="0 0 0 270"
-                    Width="200" Height="40" />
+                <ComboBox Width="200" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 100 0 0" ItemsSource="{Binding SortedStudents}"  SelectedItem="{Binding student_, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"   materialDesign:HintAssist.Hint="Select Student">
 
+                </ComboBox>
 
-                <TextBox 
-    Text="{Binding student_.surname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-    materialDesign:HintAssist.Hint="Enter Surname"
-    HorizontalContentAlignment="Right"
-    FontSize="18" 
-    Margin="0 0 0 160"
-    Width="200" Height="40" />
+                <ComboBox Width="200" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 140 0 0" ItemsSource="{Binding marks}" SelectedItem="{Binding mark_, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"   materialDesign:HintAssist.Hint="Add Mark">
 
-                <TextBox 
-    Text="{Binding student_.email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-    materialDesign:HintAssist.Hint="Enter Email"
-    HorizontalContentAlignment="Right"
-    FontSize="18" 
-    Margin="0 0 0 50"
-    Width="200" Height="40" />
+                </ComboBox>
 
-                <TextBox 
-    Text="{Binding student_.password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-    materialDesign:HintAssist.Hint="Enter Password"
-    HorizontalContentAlignment="Right"
-    FontSize="18" 
-    Margin="0 0 0 -60"
-    Width="200" Height="40" />
+                <ComboBox Width="200" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 180 0 0" ItemsSource="{Binding christals}" SelectedItem="{Binding christal_, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"   materialDesign:HintAssist.Hint="Add Christal">
+
+                </ComboBox>
+
 
 
 

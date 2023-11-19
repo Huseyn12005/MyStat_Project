@@ -10,17 +10,20 @@
       },
       "students": [
         {
-          "total": 30,
+          "total": 42,
           "password": "20050228",
           "marks": [
             11,
             12,
-            12
+            12,
+            12,
+            12,
+            9
           ],
           "username": "Oruco_ac26",
           "email": "Oruco_ac26@gmail.com",
-          "diamonds": 10,
-          "coins": 20,
+          "diamonds": 15,
+          "coins": 27,
           "name": "Huseyn",
           "surname": "Orucov",
           "father": "Fedai",

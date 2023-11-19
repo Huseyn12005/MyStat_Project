@@ -79,6 +79,7 @@ namespace MyStat_Project.ViewModels.PageViewModels
         public bool CanSave(object? parameter)
         {
             return !string.IsNullOrEmpty(student_!.name) &&
+                !string.IsNullOrEmpty(groupName) &&
                    !string.IsNullOrEmpty(student_!.username) &&
                    !string.IsNullOrEmpty(student_!.surname) &&
                    !string.IsNullOrEmpty(student_!.father) &&
