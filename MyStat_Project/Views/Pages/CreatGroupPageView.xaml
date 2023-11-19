@@ -34,6 +34,39 @@
                     Margin="0 0 0 270"
                     Width="200" Height="40" />
 
+                <TextBox 
+                    Text="{Binding teacher_.name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    materialDesign:HintAssist.Hint="Enter TeacherName"
+                    HorizontalContentAlignment="Right"
+                    FontSize="18" 
+                    Margin="0 0 0 160"
+                    Width="200" Height="40" />
+
+
+                <TextBox 
+    Text="{Binding teacher_.surname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+    materialDesign:HintAssist.Hint="Enter TeacherSurname"
+    HorizontalContentAlignment="Right"
+    FontSize="18" 
+    Margin="0 0 0 50"
+    Width="200" Height="40" />
+
+                <TextBox 
+    Text="{Binding teacher_.email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+    materialDesign:HintAssist.Hint="Enter TeacherEmail"
+    HorizontalContentAlignment="Right"
+    FontSize="18" 
+    Margin="0 0 0 -60"
+    Width="200" Height="40" />
+
+                <TextBox 
+    Text="{Binding teacher_.password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+    materialDesign:HintAssist.Hint="Enter TeacherPassword"
+    HorizontalContentAlignment="Right"
+    FontSize="18" 
+    Margin="0 0 0 -170"
+    Width="200" Height="40" />
+
 
                 <Button Command="{Binding SaveCommand}" Background="#1bd2c7" Content="Save" Width="100" VerticalAlignment="Bottom" Margin="0 0 200 20"/>
                 <Button      Command="{Binding BackCommand}"

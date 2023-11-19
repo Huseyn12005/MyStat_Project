@@ -14,6 +14,8 @@ using System.Windows;
 using System.Windows.Input;
 using System.Collections.ObjectModel;
 using LessonMVVM.Services;
+using System.IO;
+using System.Text.Json;
 
 namespace MyStat_Project.ViewModels.PageViewModels
 {
@@ -53,6 +55,12 @@ namespace MyStat_Project.ViewModels.PageViewModels
             AllStudentsCommand = new RelayCommand(EnterAllStudents);
             AddStudentsCommand = new RelayCommand(EnterAddStudents);
             CreatGroupCommand = new RelayCommand(EnterCreatGroup);
+
+            var folder = new DirectoryInfo("../../../DataBase");
+            var fullPath = Path.Combine(folder.FullName, "StepIt.json");
+            var jsonText = File.ReadAllText(fullPath);
+            academy = JsonSerializer.Deserialize<Academy>(jsonText);
+            groups = new ObservableCollection<Academy_group>(academy!.groups);
         }
 
         public void EnterAllStudents(object? parameter)

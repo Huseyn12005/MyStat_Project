@@ -73,6 +73,8 @@ namespace MyStat_Project.ViewModels.PageViewModels
             var jsonText = JsonSerializer.Serialize(academies, options);
             File.WriteAllText(fullPath, jsonText);
 
+
+
         }
         public bool CanSave(object? parameter)
         {

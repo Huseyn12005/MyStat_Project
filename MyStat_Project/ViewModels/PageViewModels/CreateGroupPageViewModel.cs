@@ -27,7 +27,9 @@ namespace MyStat_Project.ViewModels.PageViewModels
         public ObservableCollection<Academy_group> groups { get => Groups; set { Groups = value; OnPropertyChanged(); } }
         private Student student1;
         private string groupName1;
+        private Teacher teacher1;
 
+        public Teacher teacher_ { get => teacher1; set { teacher1 = value; OnPropertyChanged(); } }
         public Student student_ { get => student1; set { student1 = value; OnPropertyChanged(); } }
         public string groupName { get => groupName1; set { groupName1 = value; OnPropertyChanged(); } }
         public ICommand? SaveCommand { get; set; }
@@ -36,7 +38,7 @@ namespace MyStat_Project.ViewModels.PageViewModels
         {
             academies = academy_;
             group_ = new();
- 
+            teacher_ = new();
             groups = groups_;
             SaveCommand = new RelayCommand(Save, CanSave);
             BackCommand = new RelayCommand(BackPage);
@@ -52,10 +54,11 @@ namespace MyStat_Project.ViewModels.PageViewModels
         }
         public void Save(object? parameter)
         {
+            group_.teacher = teacher_;
             group_.students = new ObservableCollection<Student>();
             academies.groups.Add(group_);
             group_ = new();
-
+            teacher_ = new();
             var folder = new DirectoryInfo("../../../DataBase");
             var fullPath = Path.Combine(folder.FullName, "StepIt.json");
 
@@ -64,16 +67,18 @@ namespace MyStat_Project.ViewModels.PageViewModels
                 WriteIndented = true
             };
 
-            // Assuming 'academy' is the instance of the Academy class you want to serialize
             var jsonText = JsonSerializer.Serialize(academies, options);
 
-            // Write the serialized JSON to the file
             File.WriteAllText(fullPath, jsonText);
 
         }
         public bool CanSave(object? parameter)
         {
-            return !string.IsNullOrEmpty(group_!.name);
+            return !string.IsNullOrEmpty(group_!.name)&&
+                !string.IsNullOrEmpty(teacher_!.name) &&
+                !string.IsNullOrEmpty(teacher_!.surname) &&
+                !string.IsNullOrEmpty(teacher_!.email) &&
+                !string.IsNullOrEmpty(teacher_!.password) ;
         }
     }
 }
